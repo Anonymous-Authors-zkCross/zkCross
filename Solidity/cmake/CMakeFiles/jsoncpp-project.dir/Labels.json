@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/xinlei/solidity/cmake/CMakeFiles/jsoncpp-project"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/CMakeFiles/jsoncpp-project.rule"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/CMakeFiles/jsoncpp-project-complete.rule"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/deps/src/jsoncpp-project-stamp/jsoncpp-project-install.rule"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/deps/src/jsoncpp-project-stamp/jsoncpp-project-mkdir.rule"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/deps/src/jsoncpp-project-stamp/jsoncpp-project-download.rule"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/deps/src/jsoncpp-project-stamp/jsoncpp-project-update.rule"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/deps/src/jsoncpp-project-stamp/jsoncpp-project-patch.rule"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/deps/src/jsoncpp-project-stamp/jsoncpp-project-configure.rule"
+		},
+		{
+			"file" : "/home/xinlei/solidity/cmake/deps/src/jsoncpp-project-stamp/jsoncpp-project-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"jsoncpp-project"
+		],
+		"name" : "jsoncpp-project"
+	}
+}

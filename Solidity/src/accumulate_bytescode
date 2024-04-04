@@ -1,0 +1,233 @@
+EVM assembly:
+    /* "../src/VerifySignature.sol":26:377  contract VerifySignature {... */
+  mstore(0x40, 0x80)
+  callvalue
+    /* "--CODEGEN--":8:17   */
+  dup1
+    /* "--CODEGEN--":5:7   */
+  iszero
+  tag_1
+  jumpi
+    /* "--CODEGEN--":30:31   */
+  0x0
+    /* "--CODEGEN--":27:28   */
+  dup1
+    /* "--CODEGEN--":20:32   */
+  revert
+    /* "--CODEGEN--":5:7   */
+tag_1:
+    /* "../src/VerifySignature.sol":26:377  contract VerifySignature {... */
+  pop
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "../src/VerifySignature.sol":26:377  contract VerifySignature {... */
+      mstore(0x40, 0x80)
+      jumpi(tag_1, lt(calldatasize, 0x4))
+      and(div(calldataload(0x0), 0x100000000000000000000000000000000000000000000000000000000), 0xffffffff)
+      0xe2e70042
+      dup2
+      eq
+      tag_2
+      jumpi
+    tag_1:
+      0x0
+      dup1
+      revert
+        /* "../src/VerifySignature.sol":277:375  function ADD(uint8 a, uint8 b) public returns (uint8)... */
+    tag_2:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_3
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_3:
+        /* "../src/VerifySignature.sol":277:375  function ADD(uint8 a, uint8 b) public returns (uint8)... */
+      pop
+      tag_4
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_5
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_5:
+      pop
+        /* "../src/VerifySignature.sol":277:375  function ADD(uint8 a, uint8 b) public returns (uint8)... */
+      0xff
+      dup2
+      calldataload
+      dup2
+      and
+      swap2
+      0x20
+      add
+      calldataload
+      and
+      jump(tag_6)
+    tag_4:
+      0x40
+      dup1
+      mload
+      0xff
+      swap1
+      swap3
+      and
+      dup3
+      mstore
+      mload
+      swap1
+      dup2
+      swap1
+      sub
+      0x20
+      add
+      swap1
+      return
+    tag_6:
+        /* "../src/VerifySignature.sol":352:368  accumulate(a, b) */
+      0x40
+      dup1
+      mload
+        /* "../src/VerifySignature.sol":324:329  uint8 */
+      0x0
+        /* "../src/VerifySignature.sol":352:368  accumulate(a, b) */
+      dup1
+      dup3
+      mstore
+      0x20
+      dup1
+      dup4
+      add
+      dup1
+      dup6
+      mstore
+      0xff
+      dup1
+      dup9
+      and
+      swap1
+      swap2
+      mstore
+      dup6
+      and
+      dup4
+      dup6
+      add
+      mstore
+      swap3
+      mload
+        /* "../src/VerifySignature.sol":324:329  uint8 */
+      swap1
+      swap3
+        /* "../src/VerifySignature.sol":352:368  accumulate(a, b) */
+      0xb
+      swap3
+      0x60
+      dup1
+      dup3
+      add
+      swap4
+      swap2
+      dup3
+      swap1
+      sub
+      add
+      dup2
+      dup6
+      gas
+      staticcall
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_8
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x0
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x0
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_8:
+        /* "../src/VerifySignature.sol":352:368  accumulate(a, b) */
+      pop
+      pop
+      pop
+      mload(0x40)
+      returndatasize
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_9
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_9:
+      pop
+        /* "../src/VerifySignature.sol":352:368  accumulate(a, b) */
+      mload
+      swap4
+        /* "../src/VerifySignature.sol":277:375  function ADD(uint8 a, uint8 b) public returns (uint8)... */
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+
+    auxdata: 0xa165627a7a723058205befaff5a393c9ec0ee1ac47d8606bd5c5a57b65a8bd128891ed3e7788486c0e0029
+}
+
+Binary: 
+608060405234801561001057600080fd5b50610118806100206000396000f300608060405260043610603e5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663e2e7004281146043575b600080fd5b348015604e57600080fd5b50607460048036036040811015606357600080fd5b5060ff81358116916020013516608a565b6040805160ff9092168252519081900360200190f35b604080516000808252602080830180855260ff80881690915285168385015292519092600b92606080820193918290030181855afa15801560cf573d6000803e3d6000fd5b5050506040513d602081101560e357600080fd5b505193925050505600a165627a7a723058205befaff5a393c9ec0ee1ac47d8606bd5c5a57b65a8bd128891ed3e7788486c0e0029

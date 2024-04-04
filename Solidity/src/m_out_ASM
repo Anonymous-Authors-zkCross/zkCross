@@ -1,0 +1,262 @@
+    /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":26:398  contract VerifySignature {... */
+  mstore(0x40, 0x80)
+  callvalue
+    /* "--CODEGEN--":8:17   */
+  dup1
+    /* "--CODEGEN--":5:7   */
+  iszero
+  tag_1
+  jumpi
+    /* "--CODEGEN--":30:31   */
+  0x0
+    /* "--CODEGEN--":27:28   */
+  dup1
+    /* "--CODEGEN--":20:32   */
+  revert
+    /* "--CODEGEN--":5:7   */
+tag_1:
+    /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":26:398  contract VerifySignature {... */
+  pop
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":26:398  contract VerifySignature {... */
+      mstore(0x40, 0x80)
+      jumpi(tag_1, lt(calldatasize, 0x4))
+      calldataload(0x0)
+      0x100000000000000000000000000000000000000000000000000000000
+      swap1
+      div
+      0xffffffff
+      and
+      dup1
+      0xe2e70042
+      eq
+      tag_2
+      jumpi
+    tag_1:
+      0x0
+      dup1
+      revert
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":292:396  function ADD(uint8 a, uint8 b) public returns (uint8)... */
+    tag_2:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_3
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_3:
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":292:396  function ADD(uint8 a, uint8 b) public returns (uint8)... */
+      pop
+      tag_4
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_5
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x0
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_5:
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":292:396  function ADD(uint8 a, uint8 b) public returns (uint8)... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      0xff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      jump(tag_6)
+    tag_4:
+      mload(0x40)
+      dup1
+      dup3
+      0xff
+      and
+      0xff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+    tag_6:
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":339:344  uint8 */
+      0x0
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":367:389  accumulate(a, b, a, b) */
+      0xb
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":378:379  a */
+      dup4
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":381:382  b */
+      dup4
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":384:385  a */
+      dup6
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":387:388  b */
+      dup6
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":367:389  accumulate(a, b, a, b) */
+      mload(0x40)
+      0x0
+      dup2
+      mstore
+      0x20
+      add
+      0x40
+      mstore
+      mload(0x40)
+      dup1
+      dup6
+      0xff
+      and
+      0xff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      dup5
+      0xff
+      and
+      0xff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      0xff
+      and
+      0xff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      dup3
+      0xff
+      and
+      0xff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap5
+      pop
+      pop
+      pop
+      pop
+      pop
+      0x20
+      mload(0x40)
+      0x20
+      dup2
+      sub
+      swap1
+      dup1
+      dup5
+      sub
+      swap1
+      dup6
+      gas
+      staticcall
+test
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_8
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x0
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x0
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_8:
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":367:389  accumulate(a, b, a, b) */
+      pop
+      pop
+      pop
+      mload(sub(mload(0x40), 0x20))
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":360:389  return accumulate(a, b, a, b) */
+      swap1
+      pop
+        /* "/home/zhiguo/application/Solidity/solidity/src/VerifySignature.sol":292:396  function ADD(uint8 a, uint8 b) public returns (uint8)... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+
+    auxdata: 0xa165627a7a72305820a0d746383c2a71c9932e22364c96de33c8090dc4f7126b78e1b3e57536da08950029
+
+sub_0: assembly {

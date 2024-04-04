@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -fuse-ld=gold  -rdynamic CMakeFiles/solc.dir/CommandLineInterface.cpp.o CMakeFiles/solc.dir/main.cpp.o  -o solc ../libsolidity/libsolidity.a -Wl,-Bstatic -lboost_program_options ../libevmasm/libevmasm.a ../libdevcore/libdevcore.a ../deps/lib/libjsoncpp.a -lboost_regex -Wl,-Bdynamic -lpthread -Wl,-Bstatic -lboost_filesystem -lboost_system -Wl,-Bdynamic 

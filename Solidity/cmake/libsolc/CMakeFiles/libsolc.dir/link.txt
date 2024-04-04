@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsolc.a  CMakeFiles/libsolc.dir/libsolc.cpp.o
+/usr/bin/ranlib libsolc.a

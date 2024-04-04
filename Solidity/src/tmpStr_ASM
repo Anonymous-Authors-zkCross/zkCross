@@ -1,0 +1,275 @@
+tmp.str()==========
+     /* "../src/VerifySignature.sol":26:392  contract VerifySignature {... */
+  mstore(0x40, 0x80)
+  callvalue
+    /* "--CODEGEN--":8:17   */
+  dup1
+    /* "--CODEGEN--":5:7   */
+  iszero
+  tag_1
+  jumpi
+    /* "--CODEGEN--":30:31   */
+  0x0
+    /* "--CODEGEN--":27:28   */
+  dup1
+    /* "--CODEGEN--":20:32   */
+  revert
+    /* "--CODEGEN--":5:7   */
+tag_1:
+    /* "../src/VerifySignature.sol":26:392  contract VerifySignature {... */
+  pop
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "../src/VerifySignature.sol":26:392  contract VerifySignature {... */
+      mstore(0x40, 0x80)
+      jumpi(tag_1, lt(calldatasize, 0x4))
+      and(div(calldataload(0x0), 0x100000000000000000000000000000000000000000000000000000000), 0xffffffff)
+      0xbb3dac72
+      dup2
+      eq
+      tag_2
+      jumpi
+    tag_1:
+      0x0
+      dup1
+      revert
+        /* "../src/VerifySignature.sol":58:274  function recoverSigner(uint8 v, bytes32 r, bytes32 s, bytes32 message) public returns (address)... */
+    tag_2:
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_3
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_3:
+        /* "../src/VerifySignature.sol":58:274  function recoverSigner(uint8 v, bytes32 r, bytes32 s, bytes32 message) public returns (address)... */
+      pop
+      tag_4
+      0x4
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:16   */
+      0x80
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:17   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_5
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x0
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_5:
+      pop
+        /* "../src/VerifySignature.sol":58:274  function recoverSigner(uint8 v, bytes32 r, bytes32 s, bytes32 message) public returns (address)... */
+      0xff
+      dup2
+      calldataload
+      and
+      swap1
+      0x20
+      dup2
+      add
+      calldataload
+      swap1
+      0x40
+      dup2
+      add
+      calldataload
+      swap1
+      0x60
+      add
+      calldataload
+      jump(tag_6)
+    tag_4:
+      0x40
+      dup1
+      mload
+      0xffffffffffffffffffffffffffffffffffffffff
+      swap1
+      swap3
+      and
+      dup3
+      mstore
+      mload
+      swap1
+      dup2
+      swap1
+      sub
+      0x20
+      add
+      swap1
+      return
+    tag_6:
+        /* "../src/VerifySignature.sol":195:256  abi.encodePacked("\x19Ethereum Signed Message:\n32", message) */
+      0x40
+      dup1
+      mload
+      0x19457468657265756d205369676e6564204d6573736167653a0a333200000000
+      0x20
+      dup1
+      dup4
+      add
+      swap2
+      swap1
+      swap2
+      mstore
+      0x3c
+      dup1
+      dup4
+      add
+      dup6
+      swap1
+      mstore
+      dup4
+      mload
+        /* "--CODEGEN--":26:47   */
+      dup1
+      dup5
+      sub
+        /* "--CODEGEN--":22:54   */
+      swap1
+      swap2
+      add
+        /* "--CODEGEN--":6:55   */
+      dup2
+      mstore
+        /* "../src/VerifySignature.sol":195:256  abi.encodePacked("\x19Ethereum Signed Message:\n32", message) */
+      0x5c
+      dup4
+      add
+      dup1
+      dup6
+      mstore
+        /* "../src/VerifySignature.sol":185:257  keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", message)) */
+      dup2
+      mload
+      swap2
+      dup4
+      add
+      swap2
+      swap1
+      swap2
+      keccak256
+        /* "../src/VerifySignature.sol":145:152  address */
+      0x0
+        /* "../src/VerifySignature.sol":175:267  ecrecover(keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", message)), v, r, s) */
+      swap2
+      dup3
+      swap1
+      mstore
+      0x7c
+      dup5
+      add
+      dup1
+      dup7
+      mstore
+      mstore
+      0xff
+      dup9
+      and
+      0x9c
+      dup5
+      add
+      mstore
+      0xbc
+      dup4
+      add
+      dup8
+      swap1
+      mstore
+      0xdc
+      dup4
+      add
+      dup7
+      swap1
+      mstore
+      swap3
+      mload
+      0x1
+      swap3
+      0xfc
+      dup1
+      dup3
+      add
+      swap4
+        /* "../src/VerifySignature.sol":195:256  abi.encodePacked("\x19Ethereum Signed Message:\n32", message) */
+      swap3
+      not(0x1f)
+        /* "../src/VerifySignature.sol":175:267  ecrecover(keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", message)), v, r, s) */
+      dup2
+      add
+      swap3
+      dup2
+      swap1
+      sub
+      swap1
+      swap2
+      add
+      swap1
+      dup6
+      gas
+      staticcall
+      iszero
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_8
+      jumpi
+        /* "--CODEGEN--":45:61   */
+      returndatasize
+        /* "--CODEGEN--":42:43   */
+      0x0
+        /* "--CODEGEN--":39:40   */
+      dup1
+        /* "--CODEGEN--":24:62   */
+      returndatacopy
+        /* "--CODEGEN--":77:93   */
+      returndatasize
+        /* "--CODEGEN--":74:75   */
+      0x0
+        /* "--CODEGEN--":67:94   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_8:
+      pop
+      pop
+        /* "../src/VerifySignature.sol":175:267  ecrecover(keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", message)), v, r, s) */
+      mload(add(not(0x1f), mload(0x40)))
+      swap7
+        /* "../src/VerifySignature.sol":58:274  function recoverSigner(uint8 v, bytes32 r, bytes32 s, bytes32 message) public returns (address)... */
+      swap6
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+
+    auxdata: 0xa165627a7a7230582004b7a58935086cfafcbb000dcdb293811fc7959a1efe5b681ae4d288efa989730029
+}

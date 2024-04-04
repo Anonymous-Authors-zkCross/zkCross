@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -fuse-ld=gold  -rdynamic CMakeFiles/lllc.dir/main.cpp.o  -o lllc ../liblll/liblll.a -Wl,-Bstatic -lboost_system ../libevmasm/libevmasm.a ../libdevcore/libdevcore.a ../deps/lib/libjsoncpp.a -lboost_filesystem -lboost_regex -lboost_system -Wl,-Bdynamic -lpthread 

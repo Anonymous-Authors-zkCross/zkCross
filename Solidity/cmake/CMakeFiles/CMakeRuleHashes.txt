@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+aec8cf4ea5876a3be2141aa5f7c5fd01 CMakeFiles/jsoncpp-project
+d16ded0d0249bffe7722aa36e6e03c20 CMakeFiles/jsoncpp-project-complete
+25c405196a439794599bfa0f69841fb2 CMakeFiles/solidity_BuildInfo.h
+f93fda8999b97da13d5b0f29493dcf4c deps/src/jsoncpp-project-stamp/jsoncpp-project-build
+cc80bd4bee85642777c5689230c3d2e3 deps/src/jsoncpp-project-stamp/jsoncpp-project-configure
+d4ef5cd83437e1a445d4c7d96f483ca4 deps/src/jsoncpp-project-stamp/jsoncpp-project-download
+e0a9adab91b879e1bab50287e3c7e542 deps/src/jsoncpp-project-stamp/jsoncpp-project-install
+270efb75cce2452258ceded6dbb2cd47 deps/src/jsoncpp-project-stamp/jsoncpp-project-mkdir
+08e19b8e402f9d344bbb4ff375935bd6 deps/src/jsoncpp-project-stamp/jsoncpp-project-patch
+0497bc0d7c170b19959f2d12940e9442 deps/src/jsoncpp-project-stamp/jsoncpp-project-update
