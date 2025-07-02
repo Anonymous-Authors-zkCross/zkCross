@@ -1,0 +1,22 @@
+zlb-watch-simulation/
+├── source-chain/
+│   ├── Dockerfile
+│   └── simulator.py
+├── zkcross-chain/
+│   ├── Dockerfile
+│   └── simulator.py
+├── dest-chain/
+│   ├── Dockerfile
+│   └── simulator.py
+├── zlb-watcher/
+│   ├── Cargo.toml
+│   └── src/
+│       ├── main.rs
+│       ├── config.rs
+│       ├── types.rs
+│       └── state.rs
+└── docker-compose.yml
+
+abstract all blockchains involved as docker containers that just spawn/verify messages. 
+(1) Source Chain abstractor: (a) generate transactions with the right formatting (b) send transactions generated to ZLB-watch (c) log transactions as block (d) send transaction logged to zkCross (2) zkCross abstractor: upon receiving source chain transaction (a) create audit transaction with right format (b) send audit transaction to Destination Chain (3)  ZLB-watch: (a) listen to Source Chain for user transactions (b) when transaction is received, log it as pending-source-block (c) listen to Source Chain for blocks (d) when block that contains transaction marked as pending-source-block is confirmed, log it as pending-auditing-transaction (e) listen to Audit Chain for transactions (e) when transaction that contains any of the transactions marked as pending-auditing-transaction, mark it as pending-confirmed-transaction (f) listen to Destination Chain for blocks (g) when a block that contains transaction marked as pending-auditing-transaction is confirmed, mark it as finished (h) if timeout occurs before step (e), log Proof of Bridge Omission message (i) if timeout occurs before step (g), log Proof of Destination Omission (4) Destination Chain abstractor: (a) listen to Audit Chain for transactions (b) when transaction is received, random choice between (c) adding transaction to block log (d) ignore
+Each one of these structures should run in their own docker container

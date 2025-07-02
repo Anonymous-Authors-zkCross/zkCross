@@ -1,0 +1,24 @@
+services:
+  source-chain:
+    build: ./source-chain
+    container_name: source-chain
+    depends_on:
+      - zlb-watcher
+
+  zkcross-chain:
+    build: ./zkcross-chain
+    container_name: zkcross-chain
+    ports:
+      - "10001:10001/udp"
+
+  dest-chain:
+    build: ./dest-chain
+    container_name: dest-chain
+    ports:
+      - "10002:10002/udp"
+
+  zlb-watcher:
+    build: ./zlb-watcher
+    container_name: zlb-watcher
+    ports:
+      - "10000:10000/udp"
